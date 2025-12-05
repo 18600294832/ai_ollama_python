@@ -9,15 +9,15 @@ import asyncio
 from app.code_agent.tools.shell_tool import get_stdio_shell_tools
 from app.code_agent.tools.amap_tools import create_amap_mcp_client
 from app.code_agent.tools.meeting_tool import get_meeting_tool
-from app.code_agent.tools.
+from app.code_agent.tools.terminal_tool import get_stdio_terminal_tools
 
 
 async def run_agent():
-    shell_tools = await get_stdio_shell_tools()
+    # shell_tools = await get_stdio_shell_tools()
     amap_tools = await create_amap_mcp_client()
     meeting_tools = await get_meeting_tool()
     terminal_tools = await get_stdio_terminal_tools()
-    tools = shell_tools + file_tools + amap_tools + meeting_tools
+    tools = file_tools + amap_tools + meeting_tools + terminal_tools
     agent = create_agent(
         model=llm_qwen,
         tools=tools,
