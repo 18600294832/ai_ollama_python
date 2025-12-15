@@ -1,0 +1,7 @@
+输入
+
+keywords (搜索关键词)，location (中心点经度纬度)，radius (搜索半径，非必须)
+
+输出
+
+pois (地点信息列表)

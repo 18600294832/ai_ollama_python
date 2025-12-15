@@ -1,0 +1,7 @@
+输入
+
+keywords (搜索关键词)，city (查询城市，非必须)
+
+输出
+
+suggestion (搜索建议)，pois (地点信息列表)
